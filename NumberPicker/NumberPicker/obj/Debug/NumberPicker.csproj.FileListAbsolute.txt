@@ -1,0 +1,8 @@
+C:\Users\eeoer\Desktop\Coding\Helpful coding things\C#practiceapp\NumberPicker\NumberPicker\bin\Debug\NumberPicker.exe.config
+C:\Users\eeoer\Desktop\Coding\Helpful coding things\C#practiceapp\NumberPicker\NumberPicker\bin\Debug\NumberPicker.exe
+C:\Users\eeoer\Desktop\Coding\Helpful coding things\C#practiceapp\NumberPicker\NumberPicker\bin\Debug\NumberPicker.pdb
+C:\Users\eeoer\Desktop\Coding\Helpful coding things\C#practiceapp\NumberPicker\NumberPicker\obj\Debug\NumberPicker.csproj.AssemblyReference.cache
+C:\Users\eeoer\Desktop\Coding\Helpful coding things\C#practiceapp\NumberPicker\NumberPicker\obj\Debug\NumberPicker.csproj.SuggestedBindingRedirects.cache
+C:\Users\eeoer\Desktop\Coding\Helpful coding things\C#practiceapp\NumberPicker\NumberPicker\obj\Debug\NumberPicker.csproj.CoreCompileInputs.cache
+C:\Users\eeoer\Desktop\Coding\Helpful coding things\C#practiceapp\NumberPicker\NumberPicker\obj\Debug\NumberPicker.exe
+C:\Users\eeoer\Desktop\Coding\Helpful coding things\C#practiceapp\NumberPicker\NumberPicker\obj\Debug\NumberPicker.pdb
