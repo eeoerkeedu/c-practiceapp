@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.Remoting.Lifetime;
 // using System.Collections.Generic;
 // using System.Linq;
 // using System.Text;
@@ -27,6 +28,55 @@ namespace NumberPicker
 
             // Reset Text Color
             Console.ResetColor();
+
+            //ask user's name
+            Console.WriteLine("What is your usename?");
+
+            // Get input
+            String name = Console.ReadLine();
+
+            // read back name
+            Console.WriteLine("Hello "+ name + ", lets play!");
+
+            // sets the number to guess
+            Random rand = new Random();
+            int correctNum = rand.Next(1,10);
+
+            // users guess
+            int guess = 0;
+
+            Console.WriteLine("Guess a # between 1 and 10");
+
+            // while guess is incorrect continue game
+            while (guess != correctNum)
+            {
+                //get input
+                string input = Console.ReadLine();
+                if (!int.TryParse(input, out guess))
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Please enter a number between 1 - 10");
+                    Console.ResetColor();
+                }
+
+                // parse and change guess value
+                guess = Int32.Parse(input);
+
+                //match guess to correct num
+                if (guess != correctNum)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Wrong number, please try again");
+                    Console.ResetColor();
+
+                }
+            }
+            //output success message
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Correct Well Done!");
+            Console.ResetColor();
+
+
         }
     }
 }
