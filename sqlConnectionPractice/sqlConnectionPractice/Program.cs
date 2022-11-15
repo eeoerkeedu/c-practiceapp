@@ -11,32 +11,30 @@ namespace sqlConnectionPractice
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Getting Connection ...");
-            var datasource = @"localhost:3306\SQLEXPRESS"; //your server
-            var database = "students_db"; //your database name
-
-
-            //your connection string 
-            string connString = @"Data Source=" + datasource + ";Initial Catalog=" + database + ";Persist Security Info=True;User ID=" + username + ";Password=" + password;
-
-            //create instanace of database connection
-            SqlConnection conn = new SqlConnection(connString);
-
             try
             {
-                Console.WriteLine("Openning Connection ...");
+                // Build connection string
+                SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+                builder.DataSource = "localhost:3306";   // update me
+                builder.UserID =               // update me
+                builder.Password =       // update me
+                builder.InitialCatalog = "master";
 
-                //open connection
-                conn.Open();
-
-                Console.WriteLine("Connection successful!");
+                // Connect to SQL
+                Console.Write("Connecting to SQL Server ... ");
+                using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+                {
+                    connection.Open();
+                    Console.WriteLine("Done.");
+                }
             }
-            catch (Exception e)
+            catch (SqlException e)
             {
-                Console.WriteLine("Error: " + e.Message);
+                Console.WriteLine(e.ToString());
             }
 
-            Console.Read();
+            Console.WriteLine("All done. Press any key to finish...");
+            Console.ReadKey(true);
         }
     }
 }
